@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --untouched-background: #dbd7d774;
+  --failed-background: #d36969df;
+  --correct-background: #52db3986;
+  --foreground: #171717;
+  --typing-foreground: #999999;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.untouched{
+  color: var(--foreground);
+  background: var(--untouched-background);
+}
+
+.correct{
+  color: var(--foreground);
+  background: var(--correct-background);
+}
+
+.failed{
+  color: var(--foreground);
+  background: var(--failed-background);
+}
+
+.typing{
+  color: var(--typing-foreground);
+}
