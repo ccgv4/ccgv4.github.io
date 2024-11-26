@@ -12,6 +12,8 @@ export default function TypewriterField() {
     const textShort = "easy"
     const text = "Thats such a nice CCG, thanks Julian for making it possible. Im more than happy to be here if i am honest with you!"
 
+    const chosenText = text;
+
     useEffect(() => {
         const keyDownHandler = (event) => {
             if(event.key === 'Backspace') {
@@ -44,13 +46,13 @@ export default function TypewriterField() {
         setCharArray(prevArray => prevArray.slice(0, -1)); // Entfernt das letzte Element
     };
 
-    var content = TextComponent(textDeutsch, charArray, Date.now() - startTime);
+    var content = TextComponent(chosenText, charArray, Date.now() - startTime);
 
     if(startTime === 0) {
-        var content = TextComponent(textDeutsch, charArray, 0);
+        var content = TextComponent(chosenText, charArray, 0);
     }
 
-    if (isTextComplete(textDeutsch, charArray)) {
+    if (isTextComplete(chosenText, charArray)) {
         content = DoneComponent(Date.now() - startTime);
     }
 
