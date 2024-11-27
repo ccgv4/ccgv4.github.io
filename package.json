@@ -1,6 +1,6 @@
 {
   "name": "typewriter",
-  "homepage": "https://<your-github-username>.github.io/<your-repo-name>",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "scripts": {
